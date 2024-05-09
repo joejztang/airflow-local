@@ -1,0 +1,9 @@
+services:
+  dev:
+    image: airflow-local:dev
+    build:
+      context: .
+    volumes:
+      - ./dags:/opt/airflow/dags
+    ports:
+      - 8080:8080
